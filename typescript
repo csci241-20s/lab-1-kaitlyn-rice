@@ -1,0 +1,175 @@
+Script started on 2020-04-15 18:00:40-0700
+ricek20@cf164-01:~$ cd csci241/lab-1-kaitlynr[K-rice
+ricek20@cf164-01:~/csci241/lab-1-kaitlyn-rice$ git config [K --giy[K[Klobal user.name Kaitlyn Rice
+ricek20@cf164-01:~/csci241/lab-1-kaitlyn-rice$ git config --global user.email ricek20@wwu.edu
+ricek20@cf164-01:~/csci241/lab-1-kaitlyn-rice$ ls
+build  build.gradle  gradle  random.txt  settings.gradle  src  username.txt  writeup.txt
+ricek20@cf164-01:~/csci241/lab-1-kaitlyn-rice$ git help
+usage: git [--version] [--help] [-C <path>] [-c <name>=<value>]
+           [--exec-path[=<path>]] [--html-path] [--man-path] [--info-path]
+           [-p | --paginate | --no-pager] [--no-replace-objects] [--bare]
+           [--git-dir=<path>] [--work-tree=<path>] [--namespace=<name>]
+           <command> [<args>]
+
+These are common Git commands used in various situations:
+
+start a working area (see also: git help tutorial)
+   clone      Clone a repository into a new directory
+   init       Create an empty Git repository or reinitialize an existing one
+
+work on the current change (see also: git help everyday)
+   add        Add file contents to the index
+   mv         Move or rename a file, a directory, or a symlink
+   reset      Reset current HEAD to the specified state
+   rm         Remove files from the working tree and from the index
+
+examine the history and state (see also: git help revisions)
+   bisect     Use binary search to find the commit that introduced a bug
+   grep       Print lines matching a pattern
+   log        Show commit logs
+   show       Show various types of objects
+   status     Show the working tree status
+
+grow, mark and tweak your common history
+   branch     List, create, or delete branches
+   checkout   Switch branches or restore working tree files
+   commit     Record changes to the repository
+   diff       Show changes between commits, commit and working tree, etc
+   merge      Join two or more development histories together
+   rebase     Reapply commits on top of another base tip
+   tag        Create, list, delete or verify a tag object signed with GPG
+
+collaborate (see also: git help workflows)
+   fetch      Download objects and refs from another repository
+   pull       Fetch from and integrate with another repository or a local branch
+   push       Update remote refs along with associated objects
+
+'git help -a' and 'git help -g' list available subcommands and some
+concept guides. See 'git help <command>' or 'git help <concept>'
+to read about a specific subcommand or concept.
+ricek20@cf164-01:~/csci241/lab-1-kaitlyn-rice$ xe[K[Kgit checkout b [K-[K[K- [Kb other
+Switched to a new branch 'other'
+ricek20@cf164-01:~/csci241/lab-1-kaitlyn-rice$ git checkout master
+Switched to branch 'master'
+Your branch is up to date with 'origin/master'.
+ricek20@cf164-01:~/csci241/lab-1-kaitlyn-rice$ git checkout other
+Switched to branch 'other'
+ricek20@cf164-01:~/csci241/lab-1-kaitlyn-rice$ touch other.tx[K[K[K[K[K[K[K[Kran.txt
+ricek20@cf164-01:~/csci241/lab-1-kaitlyn-rice$ ls
+build  build.gradle  gradle  random.txt  ran.txt  settings.gradle  src	username.txt  writeup.txt
+ricek20@cf164-01:~/csci241/lab-1-kaitlyn-rice$ git mv ran.txt other.txt
+fatal: not under version control, source=ran.txt, destination=other.txt
+ricek20@cf164-01:~/csci241/lab-1-kaitlyn-rice$ ls
+build  build.gradle  gradle  random.txt  ran.txt  settings.gradle  src	username.txt  writeup.txt
+ricek20@cf164-01:~/csci241/lab-1-kaitlyn-rice$ rm [K[K[Kgit rm ran.txt
+fatal: pathspec 'ran.txt' did not match any files
+ricek20@cf164-01:~/csci241/lab-1-kaitlyn-rice$ git checkother master
+git: 'checkother' is not a git command. See 'git --help'.
+ricek20@cf164-01:~/csci241/lab-1-kaitlyn-rice$ git checkout master
+Switched to branch 'master'
+Your branch is up to date with 'origin/master'.
+ricek20@cf164-01:~/csci241/lab-1-kaitlyn-rice$ git rm other
+fatal: pathspec 'other' did not match any files
+ricek20@cf164-01:~/csci241/lab-1-kaitlyn-rice$ git branch [K[K[K[K[K[K[Kbranch -d other
+Deleted branch other (was 7030846).
+ricek20@cf164-01:~/csci241/lab-1-kaitlyn-rice$ ls
+build  build.gradle  gradle  random.txt  ran.txt  settings.gradle  src	username.txt  writeup.txt
+ricek20@cf164-01:~/csci241/lab-1-kaitlyn-rice$ mv ran to other
+mv: target 'other' is not a directory
+ricek20@cf164-01:~/csci241/lab-1-kaitlyn-rice$ mv r[Kran to csci241
+mv: target 'csci241' is not a directory
+ricek20@cf164-01:~/csci241/lab-1-kaitlyn-rice$ git mv ran.txt oteh[K[Kher.txt
+fatal: not under version control, source=ran.txt, destination=other.txt
+ricek20@cf164-01:~/csci241/lab-1-kaitlyn-rice$ git mv ran,[K.xt[K[Ktxt csci241
+fatal: not under version control, source=ran.txt, destination=csci241
+ricek20@cf164-01:~/csci241/lab-1-kaitlyn-rice$ git mv ran.txt csci241.[K/ran.txt
+fatal: not under version control, source=ran.txt, destination=csci241/ran.txt
+ricek20@cf164-01:~/csci241/lab-1-kaitlyn-rice$ mv[K[Kgit mv ran ither[K[K[K[K[K[K.txt random.txt
+fatal: not under version control, source=ran.txt, destination=random.txt
+ricek20@cf164-01:~/csci241/lab-1-kaitlyn-rice$ git blame writeup.txt
+[?1h=f618fe55 (Kaitlyn 2020-04-15 16:01:53 -0700 1) Kaitlyn Rice[m
+da0736f1 (Kaitlyn 2020-04-15 16:07:05 -0700 2) Hobby: Videogames[m
+00f35875 (Kaitlyn 2020-04-15 16:25:28 -0700 3) Favorite Song: Lost And Found by Pretty Lights (Odesza Remix)[m
+[K[?1l>ricek20@cf164-01:~/csci241/lab-1-kaitlyn-rice$ ls
+build  build.gradle  gradle  random.txt  ran.txt  settings.gradle  src	username.txt  writeup.txt
+ricek20@cf164-01:~/csci241/lab-1-kaitlyn-rice$ rm ran.txt
+ricek20@cf164-01:~/csci241/lab-1-kaitlyn-rice$ ls
+build  build.gradle  gradle  random.txt  settings.gradle  src  username.txt  writeup.txt
+ricek20@cf164-01:~/csci241/lab-1-kaitlyn-rice$ rn[Km random,[K.txt
+ricek20@cf164-01:~/csci241/lab-1-kaitlyn-rice$ ls
+build  build.gradle  gradle  settings.gradle  src  username.txt  writeup.txt
+ricek20@cf164-01:~/csci241/lab-1-kaitlyn-rice$ git log
+[?1h=[33mcommit 7030846587dd209bd77d9a79ab4e46880f9ef7ce[m[33m ([m[1;36mHEAD -> [m[1;32mmaster[m[33m, [m[1;31morigin/master[m[33m, [m[1;31morigin/HEAD[m[33m, [m[1;32mbranch[m[33m)[m[m
+Author: Kaitlyn <ricek20@wwu.edu>[m
+Date:   Wed Apr 15 17:36:00 2020 -0700[m
+[m
+    Hello now prints command line arg[m
+[m
+[33mcommit 00f35875f20b36bb5072c0e0d6acf0318e72face[m[m
+Author: Kaitlyn <ricek20@wwu.edu>[m
+Date:   Wed Apr 15 16:25:28 2020 -0700[m
+[m
+    Song added[m
+[m
+[33mcommit bd18a959259a146214e60501ae03a95d890853b9[m[m
+Author: Kaitlyn <ricek20@wwu.edu>[m
+Date:   Wed Apr 15 16:11:52 2020 -0700[m
+[m
+    usernames added[m
+[m
+[33mcommit da0736f148b7f7d1418fbd1af202b294a7d3d130[m[m
+Author: Kaitlyn <ricek20@wwu.edu>[m
+Date:   Wed Apr 15 16:07:05 2020 -0700[m
+[m
+    Hobby added[m
+[m
+[33mcommit f618fe5516359ff5bc84a67de0b78a0cee5049b2[m[m
+Author: Kaitlyn <ricek20@wwu.edu>[m
+Date:   Wed Apr 15 16:01:53 2020 -0700[m
+[m
+    Added part 1 (names) to writeup[m
+[m
+[33mcommit 1fabf16780f0ce2de5211a8068c9e4ba83a0c000[m[m
+Author: Kaitlyn <ricek20@wwu.edu>[m
+Date:   Wed Apr 15 15:48:46 2020 -0700[m
+[m
+    Added empty writeup[m
+[m
+[33mcommit 849034792f90a7b97acb6eefda5010c1551188a0[m[m
+Author: swehrwein <swehrwein@gmail.com>[m
+Date:   Tue Apr 14 12:27:29 2020 -0700[m
+[m
+    Setting up GitHub Classroom Feedback[m
+[m
+[33mcommit 51b62bfe5d9b81772c659c17c935aa0a7b9514cf[m[33m ([m[1;31morigin/feedback[m[33m)[m[m
+Author: swehrwein <swehrwein@gmail.com>[m
+Date:   Tue Apr 14 12:27:28 2020 -0700[m
+[m
+    Setting up GitHub Classroom Feedback[m
+[m
+[33mcommit 1c9537a904e2861ec479883544abfab35fceabd9[m[m
+:[K[KAuthor: swehrwein <swehrwein@gmail.com>[m
+:[K[K:[K[K:[K[K[7mNo next tag  (press RETURN)[27m[50;1H[K[K:[K[K:[K[K:[K[KDate:   Tue Apr 14 12:27:26 2020 -0700[m
+:[K[K[m
+:[K[K    Initial commit[m
+[7m(END)[27m[K[Kmark: [K[7m(END)[27m[K[K[7m(END)[27m[K[K [KESCESC[K[[[K33[K[7m(END)[27m[K[K[7m(END)[27m[K[K[K[7m(END)[27m[K[K[K[7m(END)[27m[K[K[K[7m(END)[27m[K[K[K[7m(END)[27m[K[K[HM[m
+[50;1H[K:[K[K:[K[K:[K[K    Initial commit[m
+[7m(END)[27m[K[K[HM[m
+[HMDate:   Wed Apr 15 17:36:00 2020 -0700[m
+[HMAuthor: Kaitlyn <ricek20@wwu.edu>[m
+[HM[33mcommit 7030846587dd209bd77d9a79ab4e46880f9ef7ce[m[33m ([m[1;36mHEAD -> [m[1;32mmaster[m[33m, [m[1;31morigin/master[m[33m, [m[1;31morigin/HEAD[m[33m, [m[1;32mbranch[m[33m)[m[m
+[50;1H[K:[K[K:[K[K[7mNo next tag  (press RETURN)[27m[50;1H[K[K:[K[K:[K[K[K:[K[KAuthor: swehrwein <swehrwein@gmail.com>[m
+:[K[K:[K[KDate:   Tue Apr 14 12:27:26 2020 -0700[m
+[m
+    Initial commit[m
+[7m(END)[27m[K[K-[Klog file: [Kff[K[K[7m(END)[27m[K[K[7m(END)[27m[K[K[K[7m(END)[27m[K[K[7m(END)[27m[K[K[7m(END)[27m[K[K[7m(END)[27m[K[K[7m(END)[27m[K[K[HM[m
+[HMDate:   Wed Apr 15 17:36:00 2020 -0700[m
+[HMAuthor: Kaitlyn <ricek20@wwu.edu>[m
+[HM[33mcommit 7030846587dd209bd77d9a79ab4e46880f9ef7ce[m[33m ([m[1;36mHEAD -> [m[1;32mmaster[m[33m, [m[1;31morigin/master[m[33m, [m[1;31morigin/HEAD[m[33m, [m[1;32mbranch[m[33m)[m[m
+[50;1H[K:[K[K:[K[K[7mNo next tag  (press RETURN)[27m[50;1H[K[K [K^X^X[K^?^?[K:[K[K[?1l>ricek20@cf164-01:~/csci241/lab-1-kaitlyn-rice$ git diff
+[?1h=[K[?1l>ricek20@cf164-01:~/csci241/lab-1-kaitlyn-rice$ git diff username.txt
+[?1h=[K[?1l>ricek20@cf164-01:~/csci241/lab-1-kaitlyn-rice$ git diff writeup.txt
+[?1h=[K[?1l>ricek20@cf164-01:~/csci241/lab-1-kaitlyn-rice$ exit
+exit
+
+Script done on 2020-04-15 18:26:20-0700
